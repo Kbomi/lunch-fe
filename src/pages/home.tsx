@@ -1,10 +1,19 @@
-import { Container } from '@mui/material'
+import { Container, Typography } from '@mui/material'
+import Roulette from '../components/home/Roulette'
+import { StyledHeaderWrap } from '../components/home/styles'
 
 const Home = () => {
   return (
-    <Container maxWidth="sm">
-      <div>home</div>
-    </Container>
+    <>
+      <StyledHeaderWrap>
+        <Typography variant="h5" gutterBottom>
+          오늘 무엇을 먹어야 할지 모르겠다면?
+          <br />
+          무작위 추첨!
+        </Typography>
+      </StyledHeaderWrap>
+      <Roulette />
+    </>
   )
 }
 

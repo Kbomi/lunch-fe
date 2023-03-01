@@ -1,26 +1,23 @@
 import { memo } from 'react'
-import { BrowserRouter, Route, Link, Routes } from 'react-router-dom'
-import { Grid, Box, Avatar } from '@mui/material'
-import styled from '@emotion/styled'
-
-const StyledHeader = styled.header`
-  padding: 8px 16px;
-`
+import { Grid, Avatar } from '@mui/material'
+import { StyledHeader, StyledHeaderContainer, StyledLink } from './styles'
 
 const Header = () => {
   return (
     <StyledHeader className="App-header">
-      <Grid>
-        <Avatar alt="Remy Sharp" src="/images/logo.png" />
-        <Grid container spacing={2}>
-          <Grid item xs={4}>
-            <Link to="/register">식당 등록</Link>
+      <StyledHeaderContainer container alignItems="center">
+        <Grid item xs={4}>
+          <Avatar alt="Remy Sharp" src="/images/logo.png" />
+        </Grid>
+        <Grid container spacing={2} justifyContent="flex-end" xs={8}>
+          <Grid item xs={2}>
+            <StyledLink to="/register">식당 등록</StyledLink>
           </Grid>
-          <Grid item xs={8}>
-            <Link to="/list">식당 목록</Link>
+          <Grid item xs={2}>
+            <StyledLink to="/list">식당 목록</StyledLink>
           </Grid>
         </Grid>
-      </Grid>
+      </StyledHeaderContainer>
     </StyledHeader>
   )
 }

@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.8",
     "@mui/styled-engine-sc": "^5.11.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -24,9 +25,11 @@
     "jest-environment-jsdom": "^29.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-lottie": "^1.2.3",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
+    "swiper": "^9.0.4",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -56,11 +59,14 @@
   },
   "devDependencies": {
     "@types/eslint": "^8",
+    "@types/prop-types": "^15",
+    "@types/react-lottie": "^1.2.6",
     "@types/styled-components": "^5",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "eslint": "latest",
     "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-react": "latest"
+    "eslint-plugin-react": "latest",
+    "prop-types": "^15.8.1"
   }
 }
