@@ -1,4 +1,4 @@
-import { Container, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import Roulette from '../components/home/Roulette'
 import { StyledHeaderWrap } from '../components/home/styles'
 

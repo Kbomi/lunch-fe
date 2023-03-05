@@ -2,8 +2,9 @@ import React from 'react'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home'
-import Register from './pages/register'
+import Register from './pages/restaurant/register'
 import Layout from './components/common/Layout'
+import { createTheme } from '@mui/material'
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/restaurant/register" element={<Register />} />
           </Routes>
         </Layout>
       </div>

@@ -11,7 +11,7 @@ const Header = () => {
         </Grid>
         <Grid container spacing={2} justifyContent="flex-end" xs={8}>
           <Grid item xs={2}>
-            <StyledLink to="/register">식당 등록</StyledLink>
+            <StyledLink to="/restaurant/register">식당 등록</StyledLink>
           </Grid>
           <Grid item xs={2}>
             <StyledLink to="/list">식당 목록</StyledLink>

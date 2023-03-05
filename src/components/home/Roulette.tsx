@@ -15,6 +15,7 @@ const Roulette = () => {
   const swiperRef = useRef<SwiperRef | null>(null)
 
   const [isSlidePlay, setIsSlidePlay] = useState(false)
+  const [isPlayLoading, setIsPlayLoading] = useState(false)
 
   const list: listType[] = [
     {
@@ -61,9 +62,11 @@ const Roulette = () => {
 
   const playSlide = useCallback(() => {
     swiperRef.current?.swiper.autoplay.start()
-
+    setIsPlayLoading(true)
     setTimeout(() => {
       const randomNumber = Math.floor(Math.random() * list.length)
+
+      setIsPlayLoading(false)
 
       swiperRef.current?.swiper.autoplay.stop()
       swiperRef.current?.swiper.slideTo(randomNumber)
@@ -83,7 +86,7 @@ const Roulette = () => {
         className="roulette"
         modules={[Autoplay]}
         autoplay={{
-          delay: 300,
+          delay: 260,
         }}
         speed={120}
       >
@@ -115,6 +118,7 @@ const Roulette = () => {
           size="large"
           onClick={playSlide}
           className="retry"
+          disabled={isPlayLoading}
         >
           <RestartAltOutlinedIcon />
           다시 돌리기

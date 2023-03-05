@@ -1,11 +1,9 @@
 import styled from '@emotion/styled'
 import { Grid } from '@mui/material'
 import { Link } from 'react-router-dom'
-
 export const containerSize = 800
 export const lightGray = '#e7ebf0'
 export const black = '#202020'
-export const mainColor = '#ffc0cb'
 
 export const StyledHeader = styled.header`
   padding: 8px 16px;
@@ -25,6 +23,7 @@ export const StyledLink = styled(Link)`
 
 export const StyledContainer = styled.div`
   max-width: ${containerSize}px;
-  padding-top: 30px;
+  height: calc(100% - 57px);
+  padding: 30px 0;
   margin: 0 auto;
 `
